@@ -21,7 +21,7 @@ def masking(number):
         d = np.reshape(d,(int(len(d)/2),2))
         masks[path.getAttribute('id')] = d
     doc.unlink()
-
+    
     for i in masks:
         cell = masks[i]
         pth = Path(cell, closed=False)
@@ -49,3 +49,5 @@ def masking(number):
         # imgplot = plt.imshow(trimmed, cmap=plt.cm.gray)
         # plt.show()
     return result
+
+#TODO: return the id for comparison
